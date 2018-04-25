@@ -1,0 +1,17 @@
+.separator {
+  border-top: solid 2px rgba(166, 147, 116, 1);
+  margin: 1em auto;
+  width: 65em;
+}
+
+.separator-tablet {
+  @extend .separator;
+  margin-left: 2em;
+  width: 60em;
+}
+
+.separator-mobile {
+  @extend .separator;
+  margin-left: 3%;
+  width: 92%;
+}

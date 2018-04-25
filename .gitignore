@@ -1,0 +1,7 @@
+*.log
+
+build/**/*
+.idea/**/*
+images/**/*
+
+node_modules/**/*

@@ -1,0 +1,64 @@
+.large-item {
+  margin: auto;
+  width: 220px;
+  height: 240px;
+}
+
+.small-item {
+  margin: auto;
+  width: 44%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.brand-ornamental-icon {
+  margin: auto;
+  width: 44%;
+}
+
+.background-image-1 {
+  background-image: url('../images/ItemBgImage1.png');
+  background-size: cover;
+}
+
+.background-image-2 {
+  background-image: url('../images/ItemBgImage2.png');
+  background-size: cover;
+}
+
+.padding-top-50px {
+  padding-top: 50px;
+}
+
+.padding-top-15px {
+  padding-top: 15px;
+}
+
+.buttonType-1 {
+  margin-top: 1em;
+  width: 142px;
+  background-color: white;
+  border: 3px solid #A69374;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  transition: color 0.5s linear;
+}
+
+.buttonType-1:hover {
+  color: #A69374;
+}
+
+.buttonType-2 {
+  @extend .buttonType-1;
+  border: 0px;
+  padding: 8px 20px;
+  background-color: #A69374;
+  color: white;
+  opacity: 1;
+  transition: background-color 0.5s linear, color 0.5s linear;
+}
+
+.buttonType-2:hover {
+  background-color: #4D4B4B;
+}

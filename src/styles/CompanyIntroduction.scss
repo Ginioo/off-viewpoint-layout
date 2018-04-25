@@ -1,0 +1,21 @@
+#company-introduction {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.company-introduction-bg-image {
+  height: 100%;
+  background-color: gainsboro;
+  background-image: url('./../images/CompanyIntroductionBgImage.png');
+}
+
+.company-introduction-bg-image-mobile {
+  @extend .company-introduction-bg-image
+}
+
+.company-introduction-text {
+  color: #757575;
+  text-indent: 20px;
+  text-align: left;
+  font-size: larger;
+}
