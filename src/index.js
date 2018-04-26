@@ -1,18 +1,8 @@
-import React  from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import {Router, browserHistory} from 'react-router';
-import ReduxPromise from 'redux-promise';
-import routes from './routes';
-import reducers from './reducers';
+import _Layout1 from '~/src/containers/Layout1';
+import _MenuReducer from '~/src/reducers/ToggleMenu';
+import _style from '~/src/style.css';
 
-
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={browserHistory} routes={routes}/>
-  </Provider>,
-  document.querySelector('.main')
-);
+export {toggleMenu, closeMenu} from '~/src/actions/ToggleMenu';
+export const OffViewpointLayout = _Layout1;
+export const MenuReducer = _MenuReducer;
+export const layoutStyle = _style;
