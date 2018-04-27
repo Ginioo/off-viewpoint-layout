@@ -1,62 +1,60 @@
-# react-redux-saga-login
-## a React login form using Redux, Redux-Saga pattern, and authenticate with Google firebase
+# Off viewpoint layout
+## a off viewpoint layout
 
 1. add reducer to reducers/index.js
 ```
-import {LoginReducer} from 'react-redux-saga-login';
+import {MenuReducer} from 'off-viewpoint-layout';
 
 ...
 
 const rootReducer = combineReducers({
-  login: LoginReducer,
+  menu: MenuReducer,
 
   ...
 
 });
 ```
 
-2. add saga to sagas/index.js
+2. add action creator to a component
+3. add toggleMenu action to onClick event
+4. add className="side-menu" to menu <div>
 ```
-import {watchLogin} from 'react-redux-saga-login';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {OffViewpointLayout, toggleMenu} from 'off-viewpoint-layout';
 
-...
+class SampleComponent extends Component {
 
-export default function* rootSaga() {
-  yield all([
+  render() {
+    return (
+      <div id="sample">
+        <OffViewpointLayout>
+          <div onClick={() => this.props.toggleMenu()}>MAIN AREA</div>
 
-    ...
-
-    watchLogin(),
-
-    ...
-
-  ]);
+          <div className="slide-menu">
+            <ul>
+              <li>menu item 1</li>
+              <li>menu item 2</li>
+              <li>menu item 3</li>
+              <li>menu item 4</li>
+            </ul>
+          </div>
+        </OffViewpointLayout>
+      </div>
+    );
+  }
 }
-```
-
-3. add action creator to a component
-```
-import {login, logout} from 'react-redux-saga-login';
-```
-
-4. add 'firebase.config.json' under project root folder
-```
-{
-  "FIREBASE_PROJECT": "YOUR PROJECT NAME",
-  "FIREBASE_API_KEY": "SAMPLE FIREBASE API KEY",
-  "FIREBASE_ID": 9999999999
+function mapStateToProps(state) {
+  return {
+    menu: state.menu
+  };
 }
-```
 
-5. Do the styling for your login form
-```
-#login-form .card {}
-#login-form .processing {}
-#login-form .title {}
-#login-form .form {}
-#login-form .input {}
-#login-form .email {}
-#login-form .pwd {}
-#login-form .error-message {}
-#login-form .btn {}
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    toggleMenu
+  }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SampleComponent);
 ```

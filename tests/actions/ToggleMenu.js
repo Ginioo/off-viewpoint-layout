@@ -5,7 +5,7 @@ import {
   CLOSE_MENU,
   toggleMenu,
   closeMenu
-} from '../../src/actions/ToggleMenu';
+} from '~/src/actions/ToggleMenu';
 
 describe('Toggle Menu Action Creator tests', () => {
   describe('toggle menu creator test', () => {

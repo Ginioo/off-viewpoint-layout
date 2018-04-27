@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,'__esModule',{value:true});var TOGGLE_MENU=exports.TOGGLE_MENU='TOGGLE_MENU';var toggleMenu=exports.toggleMenu=function toggleMenu(){return{type:TOGGLE_MENU}};var CLOSE_MENU=exports.CLOSE_MENU='CLOSE_MENU';var closeMenu=exports.closeMenu=function closeMenu(){return{type:CLOSE_MENU,payload:false}};

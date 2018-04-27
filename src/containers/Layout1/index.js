@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {closeMenu} from '~/src/actions/ToggleMenu';
+import '~/src/style.css';
 
 class Layout1 extends Component {
   render() {
