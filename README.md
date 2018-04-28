@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {OffViewpointLayout, toggleMenu} from 'off-viewpoint-layout';
+import {OffViewpointLayout, RightSideMenu, toggleMenu} from 'off-viewpoint-layout';
 
 class SampleComponent extends Component {
 
@@ -32,14 +32,14 @@ class SampleComponent extends Component {
         <OffViewpointLayout>
           <div onClick={() => this.props.toggleMenu()}>MAIN AREA</div>
 
-          <div className="slide-menu">
+          <RightSideMenu>
             <ul>
               <li>menu item 1</li>
               <li>menu item 2</li>
               <li>menu item 3</li>
               <li>menu item 4</li>
             </ul>
-          </div>
+          </RightSideMenu>
         </OffViewpointLayout>
       </div>
     );
