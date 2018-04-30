@@ -46,9 +46,7 @@ class SampleComponent extends Component {
   }
 }
 function mapStateToProps(state) {
-  return {
-    menu: state.menu
-  };
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {
