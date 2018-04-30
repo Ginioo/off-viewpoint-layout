@@ -2,7 +2,7 @@
 ## a off viewpoint layout
 
 1. add reducer to reducers/index.js
-```
+```jsx
 import {MenuReducer} from 'off-viewpoint-layout';
 
 ...
@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
 2. add action creator to a component
 3. add toggleMenu action to onClick event
 4. add className="side-menu" to menu <div>
-```
+```jsx
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
