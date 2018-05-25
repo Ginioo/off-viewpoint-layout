@@ -7,16 +7,20 @@ import '~/src/style.css';
 class Layout1 extends Component {
   render() {
     return (
-      <div id="layout-1" className="viewpoint-wrapper">
+      <div id="layout-1">
         {
           this.props.menu.isOpen
             ?
             <div className="off-viewpoint">
-              {this.props.children}
+              <div className="viewpoint-wrapper">
+                {this.props.children}
+              </div>
             </div>
             :
             <div className="viewpoint">
-              {this.props.children}
+              <div className="viewpoint-wrapper">
+                {this.props.children}
+              </div>
             </div>
         }
       </div>
